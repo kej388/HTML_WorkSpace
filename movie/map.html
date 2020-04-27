@@ -7,9 +7,6 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <!-- Fotorama from CDNJS, 19 KB -->
-    <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
     <style>
         .header, .footer{
             background-color: rgb(80, 0, 0) !important;
@@ -18,30 +15,44 @@
             border: none !important;
         }
     </style>
-
 </head>
 <body>
     <div data-role="page">
         <div data-role="header" class="header">
             <a href="index.html" rel="external" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all">No text</a>
             <a href="index.html" rel="external" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all">No text</a>
-            <h3>영화이미지</h3>
+            <h3>영화관 위치</h3>
             
         </div>
+
         <div data-role="content">
-           <!-- Add images to <div class="fotorama"></div> -->
-            <div class="fotorama" data-width="100%" data-loop="true" data-nav="thumbs" data-autoplay="3000">
-                <img src="images/pic01.jpg" alt="사진이미지01">
-                <img src="images/pic02.jpg" alt="사진이미지02">
-                <img src="images/pic03.jpg" alt="사진이미지03">
-                <img src="images/pic04.jpg" alt="사진이미지04">
-                <img src="images/pic05.jpg" alt="사진이미지05">
-                <img src="images/pic06.jpg" alt="사진이미지06">
-                <img src="images/pic07.jpg" alt="사진이미지07">
-                <img src="images/pic08.jpg" alt="사진이미지08">
-                <img src="images/pic09.jpg" alt="사진이미지09">
-                <img src="images/pic10.jpg" alt="사진이미지10">
-             </div>
+        <!-- 카카오맵 ----------------------------------------------->
+        <div id="kakaomap" style="width: 100%;height: 500px;"></div>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c96fb220f9ce887b87216d95f39c9f26"></script>
+        <script> 
+            $(document).ready(function(){
+                var mapContainer = document.getElementById('kakaomap'), // 지도를 표시할 div 
+             mapOption = { 
+                    center: new daum.maps.LatLng(37.501780, 127.026340), // 지도의 중심좌표
+                    level: 3 // 지도의 확대 레벨
+                };
+
+            var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+            // 마커가 표시될 위치입니다 
+            var markerPosition  = new daum.maps.LatLng(37.501780, 127.026340); 
+
+            // 마커를 생성합니다
+            var marker = new daum.maps.Marker({
+                position: markerPosition
+            });
+
+            // 마커가 지도 위에 표시되도록 설정합니다
+            marker.setMap(map);
+            });
+            
+        </script>
+        <!-- 카카오맵.끝.-->
         </div>
         <div data-role="footer" class="footer">
             <h3>&copy;CGV All rights reserved.</h3>

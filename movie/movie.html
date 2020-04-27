@@ -7,21 +7,39 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+    <style>
+        .header, .footer{
+            background-color: rgb(80, 0, 0) !important;
+            text-shadow: none !important;
+            color: #fff !important;
+            border: none !important;
+        }
+        .content{
+            margin: 0 auto !important;
+        }
+        .fotorama{
+            width: 100%;
+        }
+    </style>
 
 </head>
 <body>
     <div data-role="page">
-        <div data-role="header">
+        <div data-role="header" class="header">
             <a href="index.html" rel="external" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all">No text</a>
-            <a href="index.html" rel="external" class="ui-btn ui-icon-reflesh ui-btn-icon-notext ui-corner-all">No text</a>
+            <a href="index.html" rel="external" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all">No text</a>
             <h3>영화예고편</h3>
             
         </div>
-        <div data-role="content">
-            <iframe width="100%" height="360" src="https://www.youtube.com/embed/lCNb6DW7Cps" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe width="100%" height="360" src="https://www.youtube.com/embed/8_6jkUnlyTA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div data-role="content" class="content">
+            <div class="fotorama" data-nav="thumbs"> 
+                <a href="https://www.youtube.com/watch?v=lCNb6DW7Cps" data-vidio="ture">안녕,나의 소울메이트 메인예고편</a>
+                <a href="https://www.youtube.com/watch?v=8_6jkUnlyTA" data-vidio="ture">안녕, 나의 소울메이트 캐릭터분석편</a>
+            </div>
         </div>
-        <div data-role="footer">
+        <div data-role="footer" class="footer">
             <h3>&copy;CGV All rights reserved.</h3>
         </div>
     </div>

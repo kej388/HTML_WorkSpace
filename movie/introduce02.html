@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>안녕, 나의 소울메이트</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+        .header, .footer{
+            background-color: rgb(80, 0, 0) !important;
+            text-shadow: none !important;
+            color: #fff !important;
+            border: none !important;
+        }
+        .ui-btn-active{
+            background: rgb(155, 0, 0) !important;
+            border-color: rgb(155, 0, 0) !important;
+            text-shadow: none !important;
+        }
+        .ui-grid-a {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .ui-grid-a img {
+            float: left;
+            margin-right: 5px;
+        }
+        .ui-grid-a a {
+            text-decoration: none;
+            color: #059 !important;
+        }
+        .ui-grid-a a:hover {
+            text-decoration: underline;
+        }
+        .ui-grid-a span {
+            color: red;
+        }
+        .ui-grid-a p.font-size {
+            margin-top: 2px;
+            color: rgb(158, 157, 157);
+        }
+        .movie-a a{
+            color: rgb(56, 56, 56) !important;
+            font-weight: 100;
+        }
+    </style>
+</head>
+<body>
+    <div data-role="page">
+        <div data-role="header" class="header">
+            <a href="index.html" rel="external" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all">No text</a>
+            <a href="index.html" rel="external" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all">No text</a>
+            <h3>등장인물</h3>
+            
+        </div>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="introduce01.html" rel="external">영화줄거리</a></li>
+                <li><a href="#" class="ui-btn-active">등장인물</a></li>
+                <li><a href="introduce03.html" rel="external">영화평점</a></li>
+            </ul>
+        </div><!-- /navbar -->
+
+        <div data-role="content">
+            <h3>배우</h3>
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <img src="images/actor01.jpg" alt="주동우이미지">
+                        <a href="#">주동우</a>
+                        <p class="font-size">Zhou Dongyu</p>
+                        <span>주연</span> | 안생 역
+                        <p class="movie-a">
+                            <a href="#">베터 데이즈</a>,2019 <br/>
+                            <a href="#">먼 훗날 우리</a>,2018
+                        </p>
+                        
+                </div>
+                <div class="ui-block-b">
+                    <img src="images/actor02.jpg" alt="주동우이미지">
+                        <a href="#">마사순</a>
+                        <p class="font-size">Ma Si Chun</p>
+                        <span>주연</span> | 칠월 역
+                        <p class="movie-a">
+                            <a href="#">적인걸 3: 사대천왕</a>,2018 <br/>
+                            <a href="#">안녕, 나의 소울메이트</a>,2017
+                        </p>
+                </div>
+            </div>
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <img src="images/actor03.jpg" alt="이정빈이미지">
+                        <a href="#">이정빈</a>
+                        <p class="font-size">Toby Lee</p>
+                        <span>주연</span> | 가명 역
+                        <p class="movie-a">
+                            <a href="#">안녕, 나의 소울메이트</a>,2017
+                        </p>
+                        
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" class="footer">
+            <h3>&copy;CGV All rights reserved.</h3>
+        </div>
+    </div>
+</body>
+</html>

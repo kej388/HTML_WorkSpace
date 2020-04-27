@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIS.Edu</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.navbar a').on('click', function(){
+                var width=$(window).width();
+                if(width<=768){
+                    $('.btn-navbar').click(); //bootstrap 2.x
+                    $('.navbar-toggle').click(); //bootstrap 3.x     
+                    $('.navbar-toggler').click();
+                    }
+                }
+            );
+
+        // Add smooth scrolling to all links in navbar + footer link
+          $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+        
+           // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+        
+            // Prevent default anchor click behavior
+            event.preventDefault();
+        
+            // Store hash
+            var hash = this.hash;
+        
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 900, function(){
+        
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+              });
+            } // End if
+          });
+        })
+    </script>
+    <style>
+        .jumbotron {
+            background-color: #070049;
+            color: #fff;
+            padding: 100px 25px;
+            font-family: Montserrat, sans-serif;
+        }
+        .bg-grey {
+            background-color: #f6f6f6;
+        }
+        .container-fluid {
+            padding: 60px 50px;
+        }
+        .logo {
+            font-size: 200px;
+        }
+        .logo-small {
+            color: #070049;
+            font-size: 50px;
+        }
+        .h2pabo{
+            padding-bottom: 20px;
+        }
+        footer i{
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #070049;
+        }
+        .search-style {
+            width:500px; margin:0 auto;
+        }
+        @media screen and (max-width: 768px) {
+            .col-sm-4 {
+                text-align: center;
+                margin: 25px 0;
+            }
+            .jumbotron {
+                padding: 200px 25px;
+            }
+            .search-style {
+                width: 350px;
+            }
+        }
+    </style>
+</head>
+<body id="myPage">
+
+    <!-- nav ------------------------------------------ -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background:#070049">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#myPage"><img src="images/logo.png" alt="logo" style="width:40px;"></a>
+      
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#about" >About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#vision">Vision</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#curriculumn">Curriculumn</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#map">Map</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <!-- nav -->
+
+    <div class="jumbotron text-center">
+        <h1>TIS정보기술교육센터</h1>
+        <p>- 정부지원 IT전문 교육 훈련기관</p>
+        <div class="search-style">
+            <form class="form-inline">
+                <div class="input-group">
+                <input type="text" class="form-control" size="50" placeholder="검색어를 입력하세요" required>
+                <div class="input-group-btn">
+                    <button type="submit" class="btn btn-danger">Search</button>
+                </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 교육센터소개 ------------------------------------- -->
+    <div class="container-fluid" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h2 class="h2pabo">교육센터소개</h2>
+                    <p>TIS정보기술교육센터는 정부지원 IT전문교육기관 입니다.</p>
+                </div>
+                <div class="col-sm-4">
+                    <i class="fas fa-signal logo"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 교육센터소개 -->
+
+    <!-- 교육센터비전 ------------------------------------- -->
+    <div class="container-fluid bg-grey" id="vision">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <i class="fas fa-globe-europe logo"></i>
+                </div>
+                <div class="col-sm-8">
+                    <h2 class="h2pabo">교육센터비전</h2>
+                    <p>TIS정보기술교육센터는 4차산업혁명시대에 필요한 IT전문인력 양성을 위해 노력하고 있습니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 교육센터비전 -->
+
+    <!-- 교육과목 ----------------------------------------- -->
+    <div class="container-fluid text-center" id="curriculumn">
+        <div class="container">
+            <h2 class="h2pabo">교육과목</h2>
+            <div class="row">
+                <div class="col-sm-4">
+                    <i class="fab fa-html5 logo-small"></i>
+                    <h4>HTML5</h4>
+                    <p>Hyper Text Markup Language</p>
+                </div>
+                <div class="col-sm-4">
+                    <i class="fab fa-java logo-small"></i>
+                    <h4>Java</h4>
+                    <p>Object Oriented Programming Language</p>
+                </div>
+                <div class="col-sm-4">
+                    <i class="fab fa-css3-alt logo-small"></i>
+                    <h4>CSS3</h4>
+                    <p>Cascade Style Sheet</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <i class="fab fa-js-square logo-small"></i>
+                    <h4>JavaScript</h4>
+                    <p>Front End Programming Language</p>
+                </div>
+                <div class="col-sm-4">
+                    <i class="fab fa-android logo-small"></i>
+                    <h4>Android</h4>
+                    <p>Mobile App Programming Language</p>
+                </div>
+                <div class="col-sm-4">
+                    <i class="fab fa-node logo-small"></i>
+                    <h4>NodeJS</h4>
+                    <p>Back End Run Time Environment Based By JavaScript</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 교육과목 -->
+
+    <!-- Container (Contact Section) ------------------------------------->
+    <div class="container-fluid bg-grey" id="contact">
+        <div class="container">
+            <h2 class="text-center h2pabo">CONTACT</h2>
+            <div class="row">
+                <div class="col-sm-5">
+                    <p>Contact us and we'll get back to you within 24 hours.</p>
+                    <p><i class="fas fa-map-pin"></i> Chicago, US</p>
+                    <p><i class="fas fa-mobile-alt"></i> +00 1515151515</p>
+                    <p><i class="fas fa-envelope"></i> myemail@something.com</p>
+                </div>
+                <div class="col-sm-7">
+                    <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                    </div>
+                    </div>
+                    <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <button class="btn float-right" type="submit" style="background: #070049; color:#fff;">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Container (Contact Section) -->
+
+    <!-- Goolge map -------------------------------------- -->
+    <div class="container-fluid" id="map">
+        <div class="container">
+            <h2 class="text-center h2pabo">오시는 길</h2>
+            <div id="googleMap" style="width:100%; height:300px;"></div>
+            <!-- Add Google Maps -->
+            <script src="http://maps.googleapis.com/maps/api/js"></script>
+            <script>
+            var myCenter = new google.maps.LatLng(37.534501, 126.898560);
+            // var myCenter2 = new google.maps.LatLng(37.524321, 127.029361);
+                
+            function initialize() {
+            var mapProp = {
+            center:myCenter,
+            zoom:17,
+            scrollwheel:true,
+            draggable:true,
+            mapTypeId:google.maps.MapTypeId.ROADMAP
+            };
+
+            var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+            var marker = new google.maps.Marker({
+            position:myCenter,
+            });
+            // var marker2 = new google.maps.Marker({
+            // position:myCenter2,
+            // });    
+
+            marker.setMap(map);
+            // marker2.setMap(map);
+                
+            var content="TIS정보기술교육센터<br><a href='http://www.tisedu.co.kr/'>http://www.tisedu.co.kr</a>";    
+            var infowindow = new google.maps.InfoWindow({
+                    content: content
+            });
+            
+            infowindow.open(map, marker);    
+            
+            // var content2="CGV압구정<br><a href='tel:1544-1122'>1544-1122</a>";    
+            // var infowindow2 = new google.maps.InfoWindow({
+            //         content: content2
+            // });
+            
+            // infowindow2.open(map, marker2);        
+            }
+
+            google.maps.event.addDomListener(window, 'load', initialize);
+            </script>
+        </div>
+    </div> 
+    <!-- Goolge map -->
+    <!-- footer ------------------------------------------ -->
+    <footer class="container-fluid text-center bg-grey">
+        <a href="#myPage" title="To Top">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+        <p>&copy;TIS정보기술교육센터 All rights reserved.</p>
+    </footer>
+    <!-- footer -->
+</body>
+</html>

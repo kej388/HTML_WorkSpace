@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <!-- Fotorama from CDNJS, 19 KB -->
-    <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
     <style>
+        .ui-btn-active{
+            background: rgb(155, 0, 0) !important;
+            border-color: rgb(155, 0, 0) !important;
+            text-shadow: none !important;
+        }
         .header, .footer{
             background-color: rgb(80, 0, 0) !important;
             text-shadow: none !important;
@@ -18,30 +20,34 @@
             border: none !important;
         }
     </style>
-
 </head>
 <body>
     <div data-role="page">
         <div data-role="header" class="header">
             <a href="index.html" rel="external" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all">No text</a>
             <a href="index.html" rel="external" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all">No text</a>
-            <h3>영화이미지</h3>
+            <h3>영화소개</h3>
             
         </div>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#" class="ui-btn-active">영화줄거리</a></li>
+                <li><a href="introduce02.html" rel="external">등장인물</a></li>
+                <li><a href="introduce03.html" rel="external">영화평점</a></li>
+            </ul>
+        </div><!-- /navbar -->
+
         <div data-role="content">
-           <!-- Add images to <div class="fotorama"></div> -->
-            <div class="fotorama" data-width="100%" data-loop="true" data-nav="thumbs" data-autoplay="3000">
-                <img src="images/pic01.jpg" alt="사진이미지01">
-                <img src="images/pic02.jpg" alt="사진이미지02">
-                <img src="images/pic03.jpg" alt="사진이미지03">
-                <img src="images/pic04.jpg" alt="사진이미지04">
-                <img src="images/pic05.jpg" alt="사진이미지05">
-                <img src="images/pic06.jpg" alt="사진이미지06">
-                <img src="images/pic07.jpg" alt="사진이미지07">
-                <img src="images/pic08.jpg" alt="사진이미지08">
-                <img src="images/pic09.jpg" alt="사진이미지09">
-                <img src="images/pic10.jpg" alt="사진이미지10">
-             </div>
+            <h3>줄거리</h3>
+            <img src="images/pic05.jpg" alt="영화이미지" width="100%">
+            <p>열셋, 운명처럼 우리의 우정은 시작되었다. <br/>
+                열일곱, 우리에게도 첫사랑이 생겼다.<br/>
+                스물, 어른이 된다는 건 이별을 배우는 것이었다.<br/>
+                스물셋, 널 나보다 사랑할 수 없음에 낙담했다.<br/>
+                스물일곱, 너를 그리워했다.</p>
+            <p>
+                14년간 함께, 또 엇갈리며 닮아갔던
+                두 소녀의 애틋하고 찬란한 청춘 이야기!</p>
         </div>
         <div data-role="footer" class="footer">
             <h3>&copy;CGV All rights reserved.</h3>

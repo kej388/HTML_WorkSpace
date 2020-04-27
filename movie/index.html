@@ -7,13 +7,23 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+    <style>
+        .footer{
+            background-color: rgb(80, 0, 0) !important;
+            text-shadow: none !important;
+            color: #fff !important;
+        }
+    </style>
 </head>
 <body>
     <div data-role="page">
-        <div data-role="header">
-            <img src="images/title.jpg" alt="타이틀이미지" width="100%"> 
-            
+        <div data-role="header fotorama">
+            <div class="fotorama"  data-width="100%" data-ratio="800/600">
+                <img src="images/title.jpg" alt="타이틀이미지">
+                <img src="images/title01.jpg" alt="타이틀이미지">
+            </div>
         </div>
         <div data-role="content">
             <ul data-role="listview" data-inset="true">
@@ -23,18 +33,15 @@
                 <li><a href="movie.html" rel="external">
                     <img src="images/icon02.png" class="ui-li-icon" alt="아이콘2">
                     영화예고편</a></li>
-                <li><a href="#">
+                <li><a href="introduce01.html" rel="external">
                     <img src="images/icon03.png" class="ui-li-icon" alt="아이콘3">
                     영화소개</a></li>
-                <li><a href="#">
-                    <img src="images/icon04.png" class="ui-li-icon" alt="아이콘4">
-                    영화평점</a></li>
-                <li><a href="#">
+                <li><a href="map.html" rel="external">
                     <img src="images/icon05.png" class="ui-li-icon" alt="아이콘5">
                     영화관위치</a></li>
             </ul>
         </div>
-        <div data-role="footer">
+        <div data-role="footer" class="footer">
             <h3>&copy;CGV All rights reserved.</h3>
         </div>
     </div>

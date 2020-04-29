@@ -16,15 +16,15 @@
 
             var data = google.visualization.arrayToDataTable([
                 ['점수', '평점'],
-                ['연출', 6],
-                ['연기', 11],
-                ['스토리', 10],
-                ['영상미', 8],
-                ['OST', 7]
+                ['연출', 10],
+                ['연기', 12],
+                ['스토리', 8],
+                ['영상미', 10],
+                ['OST', 5]
             ]);
 
             var options = {
-                title: '네티즌평점',
+                title: '관람객평점',
                 pieHole: 0.4
             };
 
@@ -73,11 +73,11 @@
                 <h3>평점</h3>
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#" class="ui-btn-active">네티즌평점</a></li>
-                        <li><a href="introduce03-1.html">관람객평점</a></li>
+                        <li><a href="introduce03.html">네티즌평점</a></li>
+                        <li><a href="#" class="ui-btn-active">관람객평점</a></li>
                     </ul>
                 </div><!-- /navbar -->
-                <p>이 영화는 <strong>20대 여성</strong>이 좋아하는 <strong>연기</strong>가 뛰어난 영화입니다.</p>
+                <p>이 영화는 <strong>20대 여성</strong>이 좋아하는 영화입니다.</p>
                 <span></span>
                 <div id="piechart" style="width: 400px; height: 300px;"></div>
             </div><!-- /container -->

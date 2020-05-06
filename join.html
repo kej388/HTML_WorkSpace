@@ -4,10 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
+    <script>
+        function check() {
+            if(document.form1.id.value == ""){
+                alert("id를 입력하세요");
+                return false;
+            }
+            if(document.form1.name.value.length == 0){
+                alert("name을 입력하세요");
+                return false;
+            }
+        }
+    </script>
 </head>
 <body>
     <h3>회원가입</h3>
-    <form action="join.jsp" method="post">
+    <form name="form1" action="join.jsp" method="post" onsubmit="return check();">
         id <input type="text" name="id"><br>
         name <input type="text" name ="name"><br>
         pw <input type="password" name="pw"><br>
@@ -27,7 +39,7 @@
         자기소개 <br>
         <textarea name="introduce" cols="50" rows="10"></textarea><br>
         사진 <input type="file" name="picture">
-        <br><button type="submit" value="등록">회원가입</button>
+        <br><button type="submit" value="등록">회원가입</button> <!-- 버튼에는 onclick으로 함 -->
     </form>
 </body>
 </html>

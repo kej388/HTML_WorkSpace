@@ -255,46 +255,46 @@
             <!-- Add Google Maps -->
             <script src="http://maps.googleapis.com/maps/api/js"></script>
             <script>
-            var myCenter = new google.maps.LatLng(37.534501, 126.898560);
-            // var myCenter2 = new google.maps.LatLng(37.524321, 127.029361);
+                var myCenter = new google.maps.LatLng(37.534501, 126.898560);
+                // var myCenter2 = new google.maps.LatLng(37.524321, 127.029361);
+                    
+                function initialize() {
+                var mapProp = {
+                center:myCenter,
+                zoom:17,
+                scrollwheel:true,
+                draggable:true,
+                mapTypeId:google.maps.MapTypeId.ROADMAP
+                };
+
+                var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+                var marker = new google.maps.Marker({
+                position:myCenter,
+                });
+                // var marker2 = new google.maps.Marker({
+                // position:myCenter2,
+                // });    
+
+                marker.setMap(map);
+                // marker2.setMap(map);
+                    
+                var content="TIS정보기술교육센터<br><a href='http://www.tisedu.co.kr/'>http://www.tisedu.co.kr</a>";    
+                var infowindow = new google.maps.InfoWindow({
+                        content: content
+                });
                 
-            function initialize() {
-            var mapProp = {
-            center:myCenter,
-            zoom:17,
-            scrollwheel:true,
-            draggable:true,
-            mapTypeId:google.maps.MapTypeId.ROADMAP
-            };
-
-            var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-            var marker = new google.maps.Marker({
-            position:myCenter,
-            });
-            // var marker2 = new google.maps.Marker({
-            // position:myCenter2,
-            // });    
-
-            marker.setMap(map);
-            // marker2.setMap(map);
+                infowindow.open(map, marker);    
                 
-            var content="TIS정보기술교육센터<br><a href='http://www.tisedu.co.kr/'>http://www.tisedu.co.kr</a>";    
-            var infowindow = new google.maps.InfoWindow({
-                    content: content
-            });
-            
-            infowindow.open(map, marker);    
-            
-            // var content2="CGV압구정<br><a href='tel:1544-1122'>1544-1122</a>";    
-            // var infowindow2 = new google.maps.InfoWindow({
-            //         content: content2
-            // });
-            
-            // infowindow2.open(map, marker2);        
-            }
+                // var content2="CGV압구정<br><a href='tel:1544-1122'>1544-1122</a>";    
+                // var infowindow2 = new google.maps.InfoWindow({
+                //         content: content2
+                // });
+                
+                // infowindow2.open(map, marker2);        
+                }
 
-            google.maps.event.addDomListener(window, 'load', initialize);
+                google.maps.event.addDomListener(window, 'load', initialize);
             </script>
         </div>
     </div> 

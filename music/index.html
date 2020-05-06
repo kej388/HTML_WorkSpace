@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MUSIC</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <!-- fontawesome ------------------------------------------------>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script type="text/javascript">
+// iframe resize
+function autoResize(i)
+{
+    (i).height=0;
+    var iframeHeight=
+    (i).contentWindow.document.body.scrollHeight;
+    (i).height=iframeHeight+20;
+}
+</script>
+ <script>
+$(document).ready(function(){
+
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+
+})
+</script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+    .alert {
+      padding: 2px 0 2px;
+      font-size: 14px;
+      margin-bottom: 0;
+      color: #000;
+      background: rgb(231, 231, 231);
+      border: 1px solid rgb(180, 180, 180);
+    }
+
+    .alert-link {
+      color: rgb(15, 0, 153) !important;
+    }
+
+    .close {
+      padding-top: 0 !important;
+    }
+
+    .nav-link {
+      color: #000;
+    }
+
+    .rounded {
+      position: relative;
+      transition: bottom 3s;
+      overflow: hidden;
+    }
+
+    .hover-bottom {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      bottom: -255px;
+      background: rgb(0, 151, 68, 0.8);
+      text-align: center;
+      padding-top: 100px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .rounded:hover .hover-bottom {
+      bottom: 0px;
+    }
+
+    #slider02 .carousel-indicators{
+      position: absolute;
+      top: 100px;
+    }
+
+    #slider02 .title {
+      position: absolute;
+      top: 50px;
+      left: 40%;
+      z-index: 16;
+      font-weight: bold;
+
+    }
+
+
+    #slider02 .carousel-indicators>li,
+    #slider02 .carousel-indicators>li.active {
+      width: 200px;
+      height: 25px;
+      font-size: 20px;
+      font-weight: bold;
+      background: rgb(255, 255, 255, 0);
+      text-indent: 0;
+    }
+
+    #img01_pc,
+    #img02_pc,
+    #img03_pc {
+      display: block;
+    }
+
+    #img01_mo,
+    #img02_mo,
+    #img03_mo {
+      display: none;
+    }
+
+    #box1 .carousel-caption {
+      position: absolute;
+      left: -400px;
+      top: 300px;
+    }
+
+
+    #box2 .carousel-caption {
+      position: absolute;
+      bottom: 0;
+      color: #000;
+      font-family: 'Gamja Flower', cursive;
+    }
+
+    #submenu h5 {
+      font-weight: bold;
+    }
+
+    #submenu .sub{
+      color: black;
+      font-size: 13px;
+      text-decoration: none;
+      line-height: 40px;
+    }
+
+    .storytitle {
+      line-height: 30px;margin-top: 150px;
+    }
+
+    .storytitle > div.btn {
+      margin-left:40px;
+    }
+
+    .storydiv {
+      border-bottom: 1px solid;cursor: pointer;
+    }
+
+    #slideshowmo{
+      display:none;
+    }
+    #subMenuMo {
+      display: none;
+    }
+    @media screen and (max-width: 768px) {
+
+      #img01_pc,
+      #img02_pc,
+      #img03_pc,
+      #submenu {
+        display: none;
+      }
+
+      #img01_mo,
+      #img02_mo,
+      #img03_mo,
+      #subMenuMo {
+        display: block;
+      }
+
+      /* 제품소개 */
+      #product ul li:nth-child(3), #product ul li:last-child{
+        display:none;
+      }
+      #product .col-sm-3{
+        width: 50%;
+        margin-bottom: 20px;
+      }
+      #product #p2 {
+        display:none;
+      }
+
+      /* 모바일&IT */
+      #slideshowpc {
+      display: none;
+      }
+      #slideshowmo {
+      display: block;
+      }
+
+    #slider03 .carousel-indicators{
+      top: 0;
+    }
+
+    #slider03 .carousel-indicators>li,
+    #slider03 .carousel-indicators>li.active {
+      width: 200px;
+      height: 25px;
+      font-size: 20px;
+      font-weight: bold;
+      background: rgb(255, 255, 255, 0);
+      text-indent: 0;
+      font-size: 1rem;
+    }
+
+    #box3 .carousel-caption {
+      position: absolute;
+      bottom: 0;
+      color: #000;
+      font-family: 'Gamja Flower', cursive;
+    }
+
+    #story .storytitle {
+      margin-top: 0px;
+      text-align: center;
+    }
+
+    .storytitle > div.btn {
+      margin-left:0;
+      margin-bottom: 50px;
+    }
+    .storydiv {
+      margin-top: 20px;
+    }
+    .sub {
+      color: black;
+    }
+    #subMenuMo li {
+      margin-bottom: 10px;;
+    }
+    #subMenuMo li:nth-child(1) {
+      margin-top: 10px;
+    }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- alert------------------------------------------------- -->
+  <div class="alert alert-light alert-dismissible fade show text-center">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    사칭 스미싱 문자 주의 안내<a href="#" class="alert-link"> 자세히보기 > </a>
+  </div>
+  <!-- alert -->
+
+  <!-- nav------------------------------------------------- -->
+  <div class="container">
+    <nav class="navbar navbar-expand-md navbar-light">
+      <!-- Brand -->
+      <a href="#" class="navbar-brand" style="color:rgb(0, 151, 68)">MUSIC</a>
+  
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">MUSIC Chart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">오늘 발매 음악</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">추천 음악</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!-- nav -->
+
+  <!-- 캐러셀 ------------------------------------------ -->
+  <div id="slider01" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+
+    <ul class="carousel-indicators">
+      <li data-target="#slider01" data-slide-to="0" class="active"></li>
+      <li data-target="#slider01" data-slide-to="1"></li>
+      <li data-target="#slider01" data-slide-to="2"></li>
+    </ul>
+
+    <!-- The slideshow -->
+
+    <div class="carousel-inner">
+      <div id="box1" class="carousel-item active">
+        <img id="img01_pc" src="images/music01.jfif" alt="music" width="100%" height="816">
+
+        <img id="img01_mo" src="images/music01_mo.jpg" alt="music" width="100%" height="816">
+        <div class="carousel-caption">
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img id="img02_pc" src="images/music02.jfif" width="100%" height="816" alt="Los Angeles">
+
+        <img id="img02_mo" src="images/music02_mo.jpg" width="100%" height="816" alt="Los Angeles">
+      </div>
+
+      <div class="carousel-item">
+
+        <img id="img03_pc" src="images/music03.jfif" width="100%" height="816" alt="Los Angeles">
+
+        <img id="img03_mo" src="images/music03_mo.jpg" width="100%" height="816" alt="Los Angeles">
+      </div>
+    </div>
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#slider01" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#slider01" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+
+  </div>
+  <!-- 캘러셀 -->
+
+  <!-- 제품소개-------------------------------------------------- -->
+
+  <div id="product" class="container">
+
+    <ul class="nav justify-content-center" style="padding: 50px 0 10px;">
+      <li class="nav-item"><a class="nav-link active" href="#" style="font-weight: bold;">국내 발라드 인기</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">국내 발라드 최신</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">해외 힙합 인기</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">해외 힙합 최신</a></li>
+    </ul>
+
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="rounded">
+          <img class="card-img-top" src="images/goods01.jfif" alt="Card image">
+          <span class="hover-bottom">
+            <h5>처음처럼</h5>
+            <p>엠씨더맥스 (M.C the MAX)</p>
+          </span>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="rounded">
+          <img class="card-img-top" src="images/goods02.jpg" alt="Card image">
+          <span class="hover-bottom">
+            <h5 style="padding: 0 10px;">늦은 밤 너의 집 앞 골목길에서</h5>
+            <p>노을</p>
+          </span>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="rounded">
+          <img class="card-img-top" src="images/goods03.jpg" alt="Card image">
+          <span class="hover-bottom">
+            <h5 style="padding: 0 10px;">모든 날, 모든 순간</h5>
+            <p>폴김</p>
+          </span>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="rounded">
+          <img class="card-img-top" src="images/goods04.jpg" alt="Card image">
+          <span class="hover-bottom">
+            <h5 style="padding: 0 10px;">Love poem</h5>
+            <p>아이유</p>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div id="p2" class="row" style="padding: 50px 0">
+      <div class="col-sm-3">
+        <div class="rounded">
+          <img class="card-img-top" src="images/goods05.jpg" alt="Card image">
+          <span class="hover-bottom">
+            <h5>어떻게 이별까지 사랑하겠어, 널 사랑하는 거지</h5>
+            <p>악동뮤지션</p>
+          </span>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="rounded">
+          <img class="card-img-top" src="images/goods06.jpg" alt="Card image">
+          <span class="hover-bottom">
+            <h5 style="padding: 0 10px;">사랑이 식었다고 말해도 돼</h5>
+            <p>먼데이 키즈</p>
+          </span>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="rounded">
+          <img class="card-img-top" src="images/goods07.jfif" alt="Card image">
+          <span class="hover-bottom">
+            <h5 style="padding: 0 10px;">시든 꽃에 물을 주듯</h5>
+            <p>HYNN (박혜원)</p>
+          </span>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="rounded">
+          <img class="card-img-top" src="images/goods08.jpg" alt="Card image">
+          <span class="hover-bottom">
+            <h5 style="padding: 0 10px;">너를 만나</h5>
+            <p>폴킴</p>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 제품소개 -->
+
+  <!-- 모바일&IT(pc) ------------------------------------------ -->
+  <div class="container" id="slideshowpc">
+    <div id="slider02" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <h4 class="title">아침에 듣기 좋은 음악</h4>
+      <ul class="carousel-indicators text-center">
+        <li data-target="#slider02" data-slide-to="0" class="active">#부드러운 음색</li>
+        <li data-target="#slider02" data-slide-to="1">#상쾌한 아침</li>
+        <li class="slidenone" data-target="#slider02" data-slide-to="2">#좋은 일</li>
+        <li class="slidenone" data-target="#slider02" data-slide-to="3">#출근길</li>
+      </ul>
+
+      <!-- The slideshow -->
+
+      <div id="box2" class="carousel-inner">
+        <div  class="carousel-item active">
+          <img src="images/pic01.jpg" width="100%">
+          <div class="carousel-caption bounceInUp animated">
+            <h5>부드러운 음색의 포크 팝</h5>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="images/pic02.jpg" width="100%">
+          <div class="carousel-caption bounceInUp animated">
+            <h5>상쾌한 아침엔 리드미컬한 알앤비</h5>
+          </div>
+        </div>
+
+        <div class="carousel-item slidenone">
+          <img src="images/pic04.jpg" width="100%">
+          <div class="carousel-caption bounceInUp animated">
+            <h5>오늘은 좋은 일이 생길거야</h5>
+          </div>
+        </div>
+
+        <div class="carousel-item slidenone">
+          <img src="images/pic03.jpg" width="100%">
+          <div class="carousel-caption bounceInUp animated">
+             <h5>출근길 당신의 기분을 끌어올릴 노래</h5>
+          </div>
+        </div>
+
+      </div>
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#slider02" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#slider02" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+  </div>
+  <!-- 모바일&IT -->
+
+  <!-- 모바일&IT(mobile) ------------------------------------------ -->
+  <div class="container" id="slideshowmo">
+    <div id="slider03" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ul class="carousel-indicators text-center">
+        <li data-target="#slider03" data-slide-to="0" class="active">#부드러운 음색</li>
+        <li data-target="#slider03" data-slide-to="1">#상쾌한 아침</li>
+      </ul>
+
+      <!-- The slideshow -->
+
+      <div id="box3" class="carousel-inner">
+        <div  class="carousel-item active">
+          <img src="images/pic01.jpg" width="100%">
+          <div class="carousel-caption bounceInUp animated">
+            <h5>부드러운 음색의 포크 팝</h5>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="images/pic02.jpg" width="100%">
+          <div class="carousel-caption bounceInUp animated">
+            <h5>상쾌한 아침엔 리드미컬한 알앤비</h5>
+          </div>
+        </div>
+
+      </div>
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#slider03" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#slider03" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+  </div>
+  <!-- 모바일&IT -->
+
+  <!-- 스토리 ------------------------------------------------- -->
+
+  <div id="story" class="container" style="margin-top: 50px;">
+    <div class="row">
+      <div class="storytitle col-sm-3">
+        <h3>스토리</h3>
+        <p>당신의 삶을 특별하게 해주는<br> 노래를 추천과 공유해보세요</p>
+        <div class="btn btn-dark">더 알아보기</div>
+      </div>
+      <div class="col-sm-6">
+        <img src="images/story01.jpg" class="rounded" width="100%" alt="스토라이미지">
+      </div>
+      <div class="col-sm-3">
+        <div class="storydiv">
+          <p>해능이님</p>
+          <p>가장 좋아하는 영화인만큼 그 안에 담겨 있는 메시지도 좋고 사운드트랙마저 열렬히 응원해 주는 노래라서 좋아요!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 스토리 -->
+
+  <!-- sub menu ---------------------------------------------->
+  <div id="submenu" class="container-fluid" style="border-top:1px solid rgb(184, 184, 184); margin-top:50px">
+    <div class="container" style="margin-top:50px">
+      <div class="row">
+        <div class="col-sm-3" style="border-right: 1px solid rgb(184, 184, 184);">
+          <ul style="list-style: none;">
+            <h6>메뉴</h6>
+            <li><a href="#" class="sub">오늘 발매 음악</a></li>
+            <li><a href="#" class="sub">추천 음악</a></li>
+            <li><a href="#" class="sub">새로운 음악</a></li>
+            <li><a href="#" class="sub">장르 콜렉션</a></li>
+            <li><a href="#" class="sub">비디오 콜렉션</a></li>
+            <li><a href="#" class="sub">Editor's Pick</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-3" style="border-right: 1px solid rgb(184, 184, 184);">
+          <ul style="list-style: none;">
+            <h6>고객 문의</h6>
+            <li><a href="#" class="sub">FAQ</a></li>
+            <li><a href="#" class="sub">이메일 상담</a></li>
+            <li><a href="#" class="sub">매장 찾기</a></li>
+            <li><a href="#" class="sub">서비스센터 찾기</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-3" style="border-right: 1px solid rgb(184, 184, 184);">
+          <ul style="list-style: none;">
+            <h6>부가 정보</h6>
+            <li><a href="#" class="sub">FAQ</a></li>
+            <li><a href="#" class="sub">이메일 상담</a></li>
+            <li><a href="#" class="sub">매장 찾기</a></li>
+            <li><a href="#" class="sub">서비스센터 찾기</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-3">
+          <ul style="list-style: none;">
+            <h6>기업 정보</h6>
+            <li><a href="#" class="sub">회사소개</a></li>
+            <li><a href="#" class="sub">투자자 정보</a></li>
+            <li><a href="#" class="sub">공지사항</a></li>
+            <li><a href="#" class="sub">앨범 접근성</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- sub menu -->
+
+  <!-- mobile sub menu ----------------------------------------->
+   <!-- 서브 메뉴 모바일버전------------------------------------->
+   <div id="subMenuMo" class="container-fluid" style="margin-top : 50px;">
+    <div class="container">
+      <button class="btn btn-outline-secondary btn-block" data-toggle="collapse" data-target="#subMenuItem1">메뉴</button>
+      <div id="subMenuItem1" class="collapse" data-parent="#subMenuMo">
+        <ul style="list-style: none;">
+          <li><a href="#" class="sub">오늘 발매 음악</a></li>
+          <li><a href="#" class="sub">추천 음악</a></li>
+          <li><a href="#" class="sub">새로운 음악</a></li>
+          <li><a href="#" class="sub">장르 콜렉션</a></li>
+          <li><a href="#" class="sub">비디오 콜렉션</a></li>
+          <li><a href="#" class="sub">Editor's Pick</a></li>
+        </ul>
+      </div>
+
+      <button class="btn btn-outline-secondary btn-block" data-toggle="collapse"
+        data-target="#subMenuItem2">고객문의</button>
+      <div id="subMenuItem2" class="collapse" data-parent="#subMenuMo">
+        <ul style="list-style: none;">
+          <li><a href="#" class="sub">FAQ</a></li>
+          <li><a href="#" class="sub">이메일 상담</a></li>
+          <li><a href="#" class="sub">매장 찾기</a></li>
+          <li><a href="#" class="sub">서비스센터 찾기</a></li>
+        </ul>
+      </div>
+
+      <button class="btn btn-outline-secondary btn-block" data-toggle="collapse"
+        data-target="#subMenuItem3">부가정보</button>
+      <div id="subMenuItem3" class="collapse" data-parent="#subMenuMo">
+        <ul style="list-style: none;">
+          <li><a href="#" class="sub">FAQ</a></li>
+          <li><a href="#" class="sub">이메일 상담</a></li>
+          <li><a href="#" class="sub">매장 찾기</a></li>
+          <li><a href="#" class="sub">서비스센터 찾기</a></li>
+        </ul>
+      </div>
+
+      <button class="btn btn-outline-secondary btn-block" data-toggle="collapse"
+        data-target="#subMenuItem4">기업정보</button>
+      <div id="subMenuItem4" class="collapse" data-parent="#subMenuMo">
+        <ul style="list-style: none;">
+          <li><a href="#" class="sub">회사소개</a></li>
+          <li><a href="#" class="sub">투자자 정보</a></li>
+          <li><a href="#" class="sub">공지사항</a></li>
+          <li><a href="#" class="sub">앨범 접근성</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  <!-- 서브 메뉴 모바일버전-->
+  <!-- mobile sub menu -->
+
+  <!-- footer ----------------------------------------------- -->
+  <footer class="container-fluid text-center" style="margin-top: 50px;border-top:1px solid rgb(184, 184, 184);padding: 30px 0 30px">
+    <p>&copy;MUSIC All rights reserved.</p>
+  </footer>
+  <!-- footer -->
+</body>
+
+</html>
